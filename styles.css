@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+}
+
+.header {
+    height: 100px;
+}
+
+.screen {
+    width: 320px;
+    height: 100px;
+    margin: 10px auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.btn_grid {
+    width: 335px;
+    margin: auto;
+}
+
+.main {
+    width: 325px;
+    padding: 10px 15px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(118, 117, 117);
+}
+
+button {
+    width: 70px;
+    height: 60px;
+    font-size: 18px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.btn_clear, .btn_delete {
+    width: 46%;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: rgb(209, 220, 199);
+}

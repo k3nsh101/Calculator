@@ -1,18 +1,32 @@
-body {
-    text-align: center;
-}
+
 
 .header {
     height: 100px;
 }
 
 .screen {
-    width: 320px;
+    width: 300px;
     height: 100px;
     margin: 10px auto;
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
+    padding: 10px;
+}
+
+
+.screen_output, .screen_input {
+    font-size: 24px;
+}
+
+.screen_input {
+    height: 60%;
+    
+}
+
+.screen_output {
+    height: 40%;
+    text-align: right;
 }
 
 .btn_grid {
@@ -20,22 +34,23 @@ body {
     margin: auto;
 }
 
+.main, button {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 .main {
     width: 325px;
     padding: 10px 15px;
     margin: auto;
-    border: 2px solid black;
-    border-radius: 10px;
     background-color: rgb(118, 117, 117);
 }
 
 button {
     width: 70px;
     height: 60px;
-    font-size: 18px;
     margin-right: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
+    font-size: 18px;
 }
 
 .btn_clear, .btn_delete {

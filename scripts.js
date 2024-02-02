@@ -40,7 +40,6 @@ btn_operators.forEach((key) => {
 
 btn_equals.addEventListener("click", () => {
     let post_fix = infix_to_postfix(screen_input.textContent);
-    console.log(post_fix)
     let solution = evaluate_postfix(post_fix);
     screen_output.textContent = solution;
 })
@@ -141,13 +140,29 @@ function evaluate_postfix(post_fix_expression){
     let result = post_fix_expression;
     const operators = ['(', ')', '^', '+', '-', '*', '/']
 
-    while (result.length > 1){
-        for (let i = 0; i < result.length; i++){
-            if (operators.includes(result[i])){
-                let temp_result = operate(parseFloat(result[i-2]), result[i], parseFloat(result[i-1]));
-                result.splice(i-2,3,temp_result);
+    if (result.length < 3){
+        alert("Please enter at least two numbers");
+        return '';  
+    }
+
+    try {
+        while (result.length > 1){
+            for (let i = 0; i < result.length; i++){
+                if (operators.includes(result[i])){
+                    if (i - 2  < 0){
+                        alert("Please make sure that you entered complete expressions. Missing numbers after operators.");
+                        return '';
+                    }
+                    else {
+                        let temp_result = operate(parseFloat(result[i-2]), result[i], parseFloat(result[i-1]));
+                        result.splice(i-2,3,temp_result);
+                    }
+                }
             }
         }
+    }
+    catch (error){
+        console.log(error);
     }
     return result;
 }
